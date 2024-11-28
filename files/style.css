@@ -9,16 +9,25 @@
     height: 250vh;
     overflow: hidden;
     /* background-color: green; */
+    /* position: relative; */
+    
+}
+
+.fixed-ele{
+    position: fixed;
+    width: 100%;
+    
 }
 
 .navbar{
     width: 100%;
-    height: 4rem;
+    height: 3.5rem;
     /* background-color: red; */
     display: flex;
     justify-content:space-between;
     align-items: center;
-    cursor: pointer;
+    background: linear-gradient(126deg, rgba(0,0,0,0.9585084033613446) 16%, rgba(0, 0, 0, 0.94) 48%, rgba(0, 0, 0, 0.94) 100%);
+    color: white;
     
 }
 
@@ -26,71 +35,94 @@
     margin: 1rem;
     width: 5%;
     height: 2.5rem;
-    /* background-color: antiquewhite; */
+    background-color: antiquewhite;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    cursor: pointer;
+    color: #000;
+    
 }
 
 .nav-items{
     /* background-color: bisque; */
     display: flex;
     gap: 10px;
+    cursor: pointer;
+    color: white;
+    margin-right: 10px;
+    font-family: "Tiny5", sans-serif;
 }
+
+.faq{
+    display: flex;
+    margin-left: -32rem;
+    gap: 20px;
+    cursor: pointer;
+    font-family: "Tiny5", sans-serif;
+}
+
+.name{
+    cursor: pointer;
+    font-family: "Nosifer", sans-serif;
+    margin-left:-12rem;
+}
+
 
 /* Header */
 
 .header-section{
-    background-color: rgba(0, 0, 0, 0.915);
+    background-color: rgba(0, 0, 0, 0.995);
     width: 100%;
-    height: calc(100vh - 4rem);
+    height: calc(100vh - 3.5rem);
     display: flex;
     justify-content:center;
-    overflow: hidden;
+    
 }
 
 .bgimg{
     width: 100%;
-    filter:opacity(50%);
+    filter:opacity(60%);
 }
 
 
 .bg-img2{
     position: absolute;
-    width: 30.3%;
-    margin-top: -6.3rem;
-    margin-left: -8rem;
-    filter: grayscale(30%);
+    width: 35%;
+    margin-top: -6.9rem;
+    margin-left: -9rem;
+    filter: grayscale(20%);
     transition: all  .4s ease-in;
-    animation-name: bg1;
+    animation-name: bg2;
     animation-duration: 2s;
 }
 
-@keyframes bg1{
+@keyframes bg2{
     0%{filter:grayscale(0%);
         opacity: 0.1;}
 
     100%{
-        filter:grayscale(30%);
+        filter:grayscale(20%);
         opacity: 1 }
   }
 
 .bg-img2:hover{
     filter: grayscale(0%);
-    box-shadow: 10%;
+    transform: scale(1.01);
 }
 
 .strip{
     width: 100%;
     height: 3rem;
+    font-family: "Noto Sans Mono", monospace;
     /* background-color: rgba(255, 235, 205, 0.299); */
     position: absolute;
     display: flex;
     align-items:center;
     justify-content: center;
-    gap: 28rem;
-    font-size: 1.3rem;
+    gap: 26rem;
+    font-size: 1.5rem;
     margin-top: 20%;
     color: white;
     /* font-weight: 900; */
@@ -110,10 +142,98 @@
     
 }
 
+
+
+
+.movable{
+    width: 100%;
+    background-color: black;
+    
+    position: absolute;
+    margin-top: 100vh;
+}
+
+.items1{
+    width: 100%;
+    height: 110vh;
+    background-color: aqua;
+    position: relative;
+    display: flex;
+
+}
+
+.imgele{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.inside{
+    color: rgba(255, 255, 255, 0.737);
+    width: 35%;
+    position: absolute;
+    /* background-color: aquamarine; */
+    text-shadow: 1px 3px 5px #000000, 3px 5px 5px #000000;
+    margin-top: -230px;
+    margin-left: 20px;
+    font-family: "Tiny5", sans-serif;
+    text-transform: uppercase;
+}
+
+.inside h1{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+.inside h2{
+    font-size: 1rem;
+    text-align:start;
+}
+
+.items2{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(115, 255, 0);
+}
+.items3{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 64, 0);
+}
+
+
+
+/* responsive to mobile */
+
+
 @media screen and (max-width: 800px) {
     .navbar{
         font-size: 0.5rem;
     }
+
+    .faq{
+        display: none;
+    }
+    
+    .name{
+        margin-left: 1.5rem;
+        cursor: pointer;
+    }
+
+
+    .nav-logo{
+        margin: 1rem;
+        width: 10%;
+        height: 2.5rem;
+        background-color: antiquewhite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        cursor: pointer;
+        color: #000;
+        
+    }
+
     .strip{
         gap: 8rem;
         font-size: .4rem;
@@ -130,5 +250,20 @@
         animation: none;
         filter: none;
         overflow: hidden;
+        margin-top: -6rem;
+    }
+    .bg-img2:hover{
+        transform: none;
+    }
+
+    .items1{
+        height: 30vh;
+    }
+
+    .inside{
+        margin-top: -130px;
+        margin-left: 5px;
+        width: 45%;
+        font-size: 6px;
     }
   }
