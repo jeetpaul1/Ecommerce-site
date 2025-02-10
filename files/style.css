@@ -476,6 +476,10 @@ to {
     border-radius: 50%;
 
     transition-duration: .2s;
+
+    animation: arrow linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 .arrow i{
@@ -488,7 +492,44 @@ to {
     color: rgba(95, 90, 90, 0.875);
 }
 
+.scroll_banner{
+    animation: banner linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
 
+/* scroll animations banner */
+
+@keyframes banner {
+    from {
+        opacity: 0;
+        /* scale: 0.5; */
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        /* scale: 1; */
+        transform: translateX(0px);
+    }
+    }
+
+
+/* scroll animations arrow */
+
+@keyframes arrow {
+    from {
+        opacity: 0;
+        scale: 0;
+        /* transform: translateX(-100px); */
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+        /* transform: translateX(0px); */
+    }
+    }
+
+/* item 1 */
 .items1{
     width: 100%;
     height: 110vh;
@@ -528,6 +569,7 @@ to {
     color: rgba(255, 255, 255, 0.863);
 }
 
+ /*iitem 2 - shopping cards  */
 
 .items2{
     width: 100%;
@@ -553,7 +595,6 @@ to {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-
 }
 
 .uni-outer{
@@ -565,6 +606,10 @@ to {
     align-items: center;
     border-radius: 10px;
     margin-top: 30px;
+
+    animation: card_appear_outer linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 .uni-outer:hover{
@@ -580,6 +625,10 @@ to {
     justify-content: space-evenly;
     align-items: center;
     border-radius: 10px;
+
+    animation: card_appear_outer linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 .uni-inner{
@@ -593,7 +642,68 @@ to {
     transition-duration: .2s;
     overflow: hidden;
     box-shadow: #323131 2px 2px;
+
+    animation: card_appear_inner linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
+
+.left_outer{
+    animation: card_appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.left_outer{
+    animation: card_appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+/* scroll animations */
+
+@keyframes card_appear {
+    from {
+        opacity: 0;
+        /* scale: 0.5; */
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        /* scale: 1; */
+        transform: translateX(0px);
+    }
+    }
+/* 2 item */
+
+    /* inner */
+    @keyframes card_appear_inner {
+        from {
+            opacity: 0;
+            /* scale: 0.5; */
+            transform: translateX(40px);
+        }
+        to {
+            opacity: 1;
+            /* scale: 1; */
+            transform: translateX(0px);
+        }
+        }
+
+        @keyframes card_appear_outer {
+            from {
+                opacity: 0;
+                transform: translateX(50px);  /* Slight movement to avoid overflow */
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);     /* Final position */
+            }
+        }
+
+
+/* // */
+
 
 .uniimg{
     width: 80%;
