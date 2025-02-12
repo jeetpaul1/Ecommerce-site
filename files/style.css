@@ -371,6 +371,10 @@ to {
     height:15px;
     rotate: 45deg;
     border-radius: 12%;
+
+    animation: arrow linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 .left-top-right{
