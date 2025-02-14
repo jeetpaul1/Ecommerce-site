@@ -8,6 +8,13 @@ html{
     scroll-behavior: smooth;
 }
 
+.anton-regular{
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-style: normal;
+    /* font-size: 50px; */
+}
+
 .mainpage{
     width: 100%;
     height: 250vh;
@@ -297,7 +304,7 @@ to {
 
 .sidebar{
     width: 2%;
-    height: 310vh;
+    height: 410vh;
     /* background-color: antiquewhite; */
     position: absolute;
     z-index: 2;
@@ -561,19 +568,40 @@ to {
 }
 
 
+.anton-regular , .left_side  h1{
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+
+.left_side h1:nth-child(2n){
+    margin-bottom: 5%;
+    font-size: 130px;
+}
+
+.left_side h4{
+    line-height: 1.6;
+    font-size: 18px;
+    cursor: pointer;
+}
+
 .right_side{
     width: 100%;
     /* background-color: rgb(0, 255, 51); */
     align-content: center;
     overflow-x: auto;
     overflow-y: hidden;
-    animation: autoScroll 1s linear;
+    animation: opacityin 1s linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
 }
 
 /* Auto Scroll Animation */
-@keyframes autoScroll {
+@keyframes opacityin {
     from {
         opacity: 0;
     }
@@ -596,14 +624,59 @@ to {
     width: 30%;
     height: 100%;
     margin-left: 1%;
+    position: relative;
 }
 
-.slide img{
+.slide img,video{
     object-fit: cover;
     width: 100%;
     height: 100%;
     animation: autoScroll 1s linear forwards;
+    border-radius: 5px;
+    position: relative;
 }
+
+.slide:hover video{
+    filter: blur(2px);
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.shop_now {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.slide:hover .shop_now {
+    opacity: 1;
+}
+
+.anton-regular,.shop_now{
+        font-family: "Anton", serif;
+        font-weight: 400;
+        font-style: normal;
+        word-spacing: 5px;
+        font-size: 20px;
+}
+
+
 
 /* horizontall  scroll styling */
 
