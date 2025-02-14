@@ -552,6 +552,12 @@ to {
     width: 100%;
     align-content: center;
     color: #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10%;
+
+    animation: autoScroll 1s linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
 }
 
 
@@ -561,7 +567,7 @@ to {
     align-content: center;
     overflow-x: auto;
     overflow-y: hidden;
-    animation: autoScroll 1s linear forwards;
+    animation: autoScroll 1s linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
 }
@@ -569,12 +575,10 @@ to {
 /* Auto Scroll Animation */
 @keyframes autoScroll {
     from {
-        scroll-snap-type: x mandatory;
         opacity: 0;
-        transform: translateX(0px);
     }
     to {
-        transform: translateX(-0%);
+        opacity: 1;
     }
 }
 
