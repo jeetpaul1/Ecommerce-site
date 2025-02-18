@@ -762,7 +762,7 @@ to {
 }
 
 .categories{
-    margin-bottom: 30px;
+    /* margin-bottom: 15px; */
 }
 
 .categories{
@@ -932,7 +932,7 @@ to {
 
 .items3{
     width: 100%;
-    height: 110vh;
+    height: 120vh;
     /* background-color: rgb(141, 141, 141); */
     background-color:   #1C1C1C;
 
