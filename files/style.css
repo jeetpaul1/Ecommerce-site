@@ -6,6 +6,7 @@
 
 html{
     scroll-behavior: smooth;
+    behavior: smooth;
 }
 
 .anton-regular{
@@ -468,13 +469,13 @@ to {
 
 .right{
     /* background-color: blue; */
-    grid-row: 1/5;
+    grid-row: 1/4;
     grid-column: 3;
     padding: 2% 5% 5% 2%;
 }
 
 .right video{
-    height: 61%;
+    height: 103%;
     width: 100%;
     object-fit:cover;
 }
@@ -486,9 +487,7 @@ to {
     top: 20%;
     left: 48.2%;
     border-radius: 50%;
-
     transition-duration: .2s;
-
     animation: arrow linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
@@ -762,9 +761,7 @@ to {
     flex-direction: column;
 }
 
-.categories{
-    /* margin-bottom: 15px; */
-}
+
 
 .categories{
     color: #ccc;
@@ -779,7 +776,7 @@ to {
 .container{
     width: 95%;
     height: 98vh;
-    /* background-color:    rgba(97, 97, 110, 0.774); */
+    /* background-color:rgba(97, 97, 110, 0.774); */
     border-radius: 10px 10px;
     display: flex;
     flex-direction: column;
