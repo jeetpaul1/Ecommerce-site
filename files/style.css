@@ -110,22 +110,22 @@ html{
 
 .header-section{
     background-color: rgba(0, 0, 0, 0.995);
-    width: 100%;
-    height: calc(100vh - 3.5rem);
+    width: 100%; height: 112vh;
+    /* height: calc(100vh - 3.5rem); */
     display: flex;
     justify-content:center;
     
 }
 
 .bgimg{
-    width: 100%;
+    width: 100%; height: 100%;
     filter:opacity(30%);
 }
 
 
 .bg-img2{
     position: absolute;
-    width: 532px;
+    width: 560px; 
     margin-top: -6.9rem;
     margin-left: -9rem;
     filter: grayscale(20%);
@@ -304,18 +304,17 @@ to {
 /* side bar */
 
 .sidebar{
-    width: 2%;
+    width: 99.8%;
     height: 420vh;
     /* background-color: antiquewhite; */
     position: absolute;
-    z-index: 2;
     display: flex;
-    justify-content: center;
-    margin-left: 1485px;
+    justify-content: flex-end;
+    /* margin-left: 92.813rem; */
 }
 
 .sidebar-item{
-    width: 100%;
+    width: 2%;
     height: 40vh;
     /* background-color: rgb(255, 0, 225); */
     position: sticky;
@@ -323,6 +322,7 @@ to {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 
 .sidebar-items{
@@ -970,7 +970,7 @@ to {
         
 
     .navbar{
-        font-size: 0.5rem;
+        font-size: .7rem;
     }
 
     .faq{
@@ -1010,6 +1010,7 @@ to {
     .bg-img2{
         margin-left: -4rem;
         width: 28.5rem;
+        height: 100%;
         animation: none;
         filter: none;
         overflow: hidden;
